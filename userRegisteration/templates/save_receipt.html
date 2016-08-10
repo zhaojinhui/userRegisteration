@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		{% load static %}
+		<link href="{% static 'bootstrap.css' %}" rel="stylesheet" type="text/css">
+		<title>Save Page</title>
+	</head>
+	<body style="font-size:20px;line-height:2.5;">
+		<div class="container">
+			<table class="table table-bordered table-striped" style='margin-top: 100px;'>
+				<colgroup>
+					<col class="col-xs-2">
+					<col class="col-xs-6">
+				</colgroup>
+				<thead>
+					<tr>
+						<th>Item</th>
+						<th>Information</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>First Name{{firstName}}</th>
+						<th>{{firstName}}</th>
+					</tr>
+					<tr>
+						<th>Last Name</th>
+						<th>{{lastName}}</th>
+					</tr>
+					<tr>
+						<th>Email</th>
+						<th>{{email}}</th>
+					</tr>
+					<tr>
+						<th>Receipt Number</th>
+						<th>{{sequence}}</th>
+					</tr>
+					<tr class="danger">
+						<th>Warning</th>
+						<th>This is a warning.</th>
+					</tr>
+				</tbody>
+			</table>
+			<a href="/"><button class="btn btn-primary">Back</button></a>
+				<button class="btn btn-success" onClick="javascript:window.print()">Print</button>
+			</div>
+	</body>
+</html>
