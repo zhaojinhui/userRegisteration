@@ -23,17 +23,19 @@ sudo pip install virtualenv
 5. Create a Virtual ENV
 virtualenv ENV
 
-6. Install Django 
+6. Download Django 
 git clone git://github.com/django/django.git
-pip install -e django/
 
 7. Start the virtual environment
 source env/bin/activate
 
-8. Here the database I use postgresql so I run the following command:
+8. Install Django in the Virtual ENV
+pip install -e django/
+
+9. Here the database I use postgresql so I run the following command:
 pip install django psycopg2
 
-9. Build a new project
+10. Build a new project
 django-admin.py startproject example
 
 11. Go into the project directory
