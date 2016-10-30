@@ -64,6 +64,16 @@ python manage.py createsuperuser
 15. And then run server
 python manage.py runserver
 
+If meet this error:
+library not loaded libssl.1.0.0.dylib django
+
+do the following steps:
+$ sudo chown -R $(whoami):admin /usr/local
+
+Once this was done, re-installed psycopg2 and performed the following:
+
+$ sudo ln -s /Library/PostgreSQL/9.3/lib/libssl.1.0.0.dylib /usr/local/lib/
+$ sudo ln -s /Library/PostgreSQL/9.3/lib/libcrypto.1.0.0.dylib /usr/local/lib/
 
 
 
